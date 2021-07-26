@@ -1,0 +1,50 @@
+<div class="container countries container">
+  <p>
+    Country
+    <select class="countries" id="countries" name="countries">
+        <option></option>
+        <option>Nigeria</option>
+        <option>Nigeria</option>
+        <option>Nigeria</option>
+        <option>Nigeria</option>
+        <option>Nigeria</option>
+        <option>Nigeria</option>
+        <option>Nigeria</option>
+        <option>Nigeria</option>
+        <option>Nigeria</option>
+        <option>Nigeria</option>
+        <option>Nigeria</option>
+        <option>Nigeria</option>
+        <option>Nigeria</option>
+        <option>Nigeria</option>
+        <option>Nigeria</option>
+    </select>
+</p>
+</div>
+
+
+
+
+function validationForm(){
+    var submit = document.getElementById('form').value;
+    if(submit == ''){
+        alert('Please put your address')
+        return false;
+    }
+}
+
+function validationForm(){
+    var submit = document.getElementById('Email').value;
+    if(submit == ''){
+        alert('Please put your Email')
+        return false;
+    }
+}
+
+function validationForm(){
+   var submit = document.getElementById('number').value;
+    if (submit == ''){
+        alert('Please put your contact')
+        return false;
+    }
+}

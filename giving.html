@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CITY OF TESTIMONIES</title>
+    <link rel="icon" href="rccg-logos-removebg-preview.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="giving.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://js.paystack.co/v1/paystack.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#"><img src="rccg-logos-removebg-preview.png" alt="C.O.T" height="50px"> COT</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">HOME <span class="sr-only"></span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">SERVICE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="giving.html">GIVING</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">FEEDBACK</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <div class="header">
+        <h2>Offering time</h2>
+        
+        <p style="font-size: 13px; font-weight: 400; padding-top: 10px;">Honour the Lord with thy substance, and with the firstfruits of all thine increase.</p>
+    </div>
+    <div class="bank-logo">
+        <img src="bank_icon1-removebg-preview.png" width="10%">
+    </div>
+    
+
+<div>
+  <form name="myForm" id="bank-form" 
+  onsubmit="return bankForm()" >
+ 
+<p>
+    Payment type:
+    <select type="text" name="payment">
+        <option></option>
+        <option>Welfare</option>
+        <option>Youth Offering</option>
+        <option>Redeemders men</option>
+        <option>Online tithes</option>
+        <option>Thanksgiving Offering</option>
+        <option>Children Offering</option>
+    </select>
+</p>
+<div>
+  <div>
+    <p><input type="text" id="Names" size="30" name="Names" placeholder="Name"/></p>
+    <div class="error" id="nameErr"></div>
+  </div>
+  <div>
+    <p><input type="text" id="form" size="30" name="Address" placeholder="Address"/></p>
+    <div class="error" id="addressErr"></div>
+  </div>
+  <div>
+    <p><input type="email" id="email" size="30" name="email" placeholder="Email"/></p>
+    <div class="error" id="emailErr"></div>
+  </div>
+<div>
+  <p><input type="number" id="number" size="30" name="phone" placeholder="Phone"/></p>
+  <div class="error" id="phoneErr"></div>
+</div>
+</div>
+<p>
+    Sex
+    <select type="text" value="" class="sex" name="Subject">
+        <option>Select</option>
+        <option>Male</option>
+        <option>Female</option>
+    </select>
+</p>
+<div class="container country-container">
+  <select class="countries" name="countries" id="countries"></select>
+</div>
+<div class="container">
+  <!-- <p>
+    <b>REST COUNTRIES</b> allows you to:
+  </p>
+  <blockquote>
+    Get information about countries via a RESTful API
+  </blockquote> -->
+    <!-- <ul>
+      <li>Country name</li>
+    </ul> -->
+    <a href="https://restcountries.eu/rest/v2/all" target="_blank"></a>
+</div>
+
+
+<p>
+    Currency
+    <select type="text" id="money" name="money">
+        <option>NGN</option>
+        <option>USD</option>
+    </select>
+</p>
+    <button type="button" onclick="validationForm()">Submit</button>
+    <input type="reset" value="Reset" name="Reset" />
+</p>
+</form>
+</div>
+
+
+
+<!-- <form id="paystack-card-form">
+  <input type="text" data-paystack="number">
+  <input type="text" data-paystack="cvv">            
+  <input type="text" data-paystack="expiryMonth">
+  <input type="text"  data-paystack="expiryYear">
+  <button type="submit" data-paystack="submit">Submit</button>
+</form> -->
+
+<form>
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <button type="button" onclick="payWithPaystack()"> Pay </button> 
+</form>
+
+
+    <script src="giving.js"></script>
+</body>
+</html>

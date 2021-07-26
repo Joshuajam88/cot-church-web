@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* background-color: rgb(224, 222, 222); */
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap')
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.navbar-collapse{
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end; 
+    position:-webkit-sticky; 
+}
+
+
+.header{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 30%;
+    font-family: 'open Sans Condensed', sans-serif;
+    display: grid;
+    justify-content: center;
+    padding-top: 150px;
+    text-align: center;
+}
+
+.bank-logo{
+    display: flex;
+    justify-content: center;
+}
+div {
+    box-sizing: border-box;
+    width: 100%;
+    /* border: 100px solid black; */
+    float: left;
+    align-content: center;
+    align-items: center;
+}
+#Names, #form{
+    text-transform: capitalize;
+}
+
+form {
+    display: block;
+    margin: 0 auto;
+    width: 600px;
+}
+
+/* blockquote{
+    border-left: 4px solid;
+    margin: 10px 0 25px;
+    padding: 10px 10px 10px 20px;
+    color: #555;
+}
+.container{
+    padding: 10px 30px;
+}
+.country-container{
+    display: flex;
+} */
+.countries{
+    width: 90%;
+    max-width: 400px;
+}
